@@ -43,21 +43,12 @@ createMachine(
             states: {
               showingSecondLevelNavigation: {
                 on: {
-                  clickNavigationItem: {
-                    target: 'PageToNavigate',
-                  },
                   clickBackLink: {
                     target: '#navigation.navigationOpen.showingFirstLevelNavigation',
                   },
                 },
               },
-              PageToNavigate: {
-                type: 'final',
-              },
             },
-          },
-          PageToNavigate: {
-            type: 'final',
           },
         },
         on: {

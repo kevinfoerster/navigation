@@ -149,7 +149,7 @@ export default function Home() {
               : navStructure.map((navItem, index) => {
                 const hasChildren = Boolean(navItem?.children);
                 const buttonProps = hasChildren ? {
-                  onClick: () => send({ type: 'clickNavigationItem', itemIndex: index, isLink: !navItem?.children }),
+                  onClick: () => send({ type: 'clickNavigationItem', itemIndex: index }),
                 } : {
                   href: navItem.href,
                   component: 'a',
